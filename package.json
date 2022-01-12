@@ -1,0 +1,45 @@
+{
+  "name": "demo-apollo-server-lambda",
+  "version": "1.0.0",
+  "description": "Pooja SAAS server less code",
+  "main": "index.js",
+  "scripts": {
+    "migration:generate": "ts-node -r dotenv/config ./migration.ts dotenv_config_path=./.env.development"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@graphql-tools/schema": "^8.3.1",
+    "apollo-server-lambda": "^3.4.1",
+    "async": "^3.2.2",
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.7.2",
+    "copyfiles": "^2.4.1",
+    "express": "^4.17.1",
+    "express-joi-validation": "^5.0.0",
+    "graphql": "^15.7.2",
+    "graphql-upload": "^11.0.0",
+    "joi": "^17.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.0",
+    "mysql2": "^2.3.0",
+    "nodemailer": "^6.5.0",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.9.0",
+    "sequelize-cli": "^6.2.0",
+    "ts-node": "^9.1.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "serverless-dotenv-plugin": "^3.10.0",
+    "serverless-offline": "^8.3.1",
+    "serverless-webpack": "^5.6.0",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.4",
+    "webpack": "^5.65.0",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
