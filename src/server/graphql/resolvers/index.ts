@@ -1,6 +1,5 @@
-import { GraphQLUpload } from 'graphql-upload';
-import { AdminMutation } from './admin';
-import { EventsQueries, EventsMutations } from './event';
+import { AdminMutation } from "./user";
+import { EventsQueries, EventsMutations } from "./event";
 
 const rootResolver = {
   Query: {
@@ -12,8 +11,6 @@ const rootResolver = {
     ...EventsMutations,
     // Add other mutations here
   },
-
-  Upload: GraphQLUpload,
 };
 
 export default rootResolver;

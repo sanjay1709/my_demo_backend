@@ -4,7 +4,6 @@
   "description": "Pooja SAAS server less code",
   "main": "index.js",
   "scripts": {
-    "migration:generate": "ts-node -r dotenv/config ./migration.ts dotenv_config_path=./.env.development"
   },
   "keywords": [],
   "author": "",

@@ -1,18 +1,15 @@
-import { gql } from 'apollo-server-lambda';
-import { makeExecutableSchema } from '@graphql-tools/schema';
-import resolvers from '../resolvers/index';
-import admin from './admin';
-import event from './events';
+import { gql } from "apollo-server-lambda";
+import { makeExecutableSchema } from "@graphql-tools/schema";
+import resolvers from "../resolvers/index";
+import user from "./user";
+import event from "./events";
 
-const types = [
-  admin,
-  event,
-];
+const types = [user, event];
 const upload = gql`
-scalar Upload
+  scalar Upload
 `;
 const date = gql`
-scalar Date
+  scalar Date
 `;
 const Query = gql`
   type Query {
@@ -31,6 +28,6 @@ const Subscription = gql`
 `;
 const schema = makeExecutableSchema({
   typeDefs: [Query, Mutation, Subscription, ...types, upload, date],
-  resolvers
+  resolvers,
 });
 export default schema;

@@ -1,10 +1,8 @@
 "use strict";
 import { Sequelize } from "sequelize";
-// import mysql2 from "mysql2";
 import config from "../../../config";
 const dbOptions: any = {
   dialect: "postgres",
-  // dialectModule: ,
   host: config.db_host,
   port: config.db_port,
 };
@@ -36,10 +34,10 @@ db.sequelize
     console.log("This is the sync after the call----->");
     db.users
       .create({
-        firstName: "Techtaliya",
-        lastName: "Techtaliya",
-        userName: "techtaliya",
-        email: "test@gmail.com",
+        firstName: "MDO User",
+        lastName: "2.0",
+        userName: "mdouser",
+        email: "demo@mdo.com",
         //pwd-123456
         password:
           "$2a$12$.0FaHmF/5gMiCODEWLnCSeBw3qZDcPdHaMW/nP/oZx3vIy8tD9OAK",

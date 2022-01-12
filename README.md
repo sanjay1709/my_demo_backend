@@ -8,20 +8,21 @@ Install NodeJS from https://nodejs.org
 Install PostgreSQL
 Install pgAdmin 4
 
-## Cloning the Code
+## Installation
 
-Clone the code using the following command
+`git clone https://github.com/sanjay1709/my_demo_backend.git`
 
-git clone https://github.com/sanjay1709/my_demo_backend.git
+`cd my_demo_backend`
 
-## Running the Application
+`npm install`
 
-Install the npm packages using the following command - npm install
+Create a database named demo in your Postgres DB Server
 
-Install Serverless using the following command - npm install serverless
+Edit .env.development file to add database details
+`DB_USER=postgres DB_PASS=admin DB_NAME=demo`
 
-Open pgAdmin4 and create a database named demo
+`npm install serverless`
 
-Start the application using the following command - serverless offline start
+`serverless offline start`
 
-The application runs on localhost:3000/dev/graphql
+Visit `localhost:3000/dev/graphql` for GraphQL playground
