@@ -23,7 +23,7 @@ Create a database named demo in your Postgres DB Server
 Edit .env.development file to add database details
 `DB_USER=postgres DB_PASS=admin DB_NAME=demo`
 
-`npm install serverless`
+`npm install serverless -g`
 
 `serverless offline start`
 
