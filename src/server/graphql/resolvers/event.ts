@@ -5,21 +5,6 @@ import { validateRequest } from "../../middleware/validate-request";
 
 const Events = require("../../models/sql/events")(db.sequelize, DataTypes);
 
-const schema = Joi.object({
-  name: Joi.string().trim().required().messages({
-    "string.empty": `Name is a required field`,
-  }),
-  description: Joi.string().trim().required().messages({
-    "string.empty": `Cover Picture is a required field`,
-  }),
-  date: Joi.date().raw().required().messages({
-    "string.empty": `Date is a required field`,
-  }),
-  organizer: Joi.required().messages({
-    "string.empty": `Image is a required field`,
-  }),
-});
-
 const EventsQueries = {
   events: async (parent: any, { offset, limit, search }, context: any) => {
     const Sequelize = require("sequelize");
@@ -51,6 +36,20 @@ const EventsQueries = {
 
 const EventsMutations = {
   addEvent: async (parent, { event }, context) => {
+    const schema = Joi.object({
+      name: Joi.string().trim().required().messages({
+        "string.empty": `Name is a required field`,
+      }),
+      description: Joi.string().trim().required().messages({
+        "string.empty": `description is a required field`,
+      }),
+      date: Joi.date().raw().required().messages({
+        "string.empty": `Date is a required field`,
+      }),
+      organizer: Joi.string().trim().required().messages({
+        "string.empty": `organizer is a required field`,
+      }),
+    });
     let result = {
       status: null,
       msg: null,
@@ -89,7 +88,20 @@ const EventsMutations = {
   },
 
   updateEvent: async (parent, { eventID, event }, context) => {
-    // }
+    const schema = Joi.object({
+      name: Joi.string().trim().required().messages({
+        "string.empty": `Name is a required field`,
+      }),
+      description: Joi.string().trim().required().messages({
+        "string.empty": `description is a required field`,
+      }),
+      date: Joi.date().raw().required().messages({
+        "string.empty": `Date is a required field`,
+      }),
+      organizer: Joi.string().trim().required().messages({
+        "string.empty": `organizer is a required field`,
+      }),
+    });
     let result = {
       status: null,
       msg: null,
