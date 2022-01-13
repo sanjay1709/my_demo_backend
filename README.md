@@ -5,7 +5,9 @@ This Code is part of a CRUD operation for an event.
 ## Pre-requisites
 
 Install NodeJS from https://nodejs.org
+
 Install PostgreSQL
+
 Install pgAdmin 4
 
 ## Installation
